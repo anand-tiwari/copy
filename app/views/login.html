@@ -1,0 +1,124 @@
+<div>
+<header>
+      <nav style="position:fixed;top:0px;left:0px;z-index:999">
+        <div style="margin-left:15%">
+          <div class="nav-wrapper">
+            <a id="logo" style="font-weight: 400;" href="http://www.nanobi.in/" class="brand-logo">NanoBi</a>
+            <form id="myForm" ng-if="isAuthenticated=='login' ">
+               <div class="row right" style="width: 100%">
+                    <div class="input col m3">
+                        <input id="email" ng-model="userName" type="email" class="validate" placeholder="User Name">
+                    </div>
+                    <div class="input col m3">
+                        <input class="password" ng-model="passWord" type="password" placeholder="Password">
+                    </div>
+                    <button ng-click="login()" class="white black-text col btn secondary-content waves-effect" style="margin:1.8% 0px 0px 8px">Submit</button>
+                </div>
+            </form>
+            <div ng-if="isAuthenticated != 'login' " class="row right" style="width=100%">
+
+                <a ng-if="isAuthenticated == 'view' " class="col m4 black-text" ui-sref="setting">
+                        <i class="fa fa-cog fa-spin fa-2x fa-fw"></i>
+                        <span class="sr-only">Loading...</span>
+                </a>
+                <a ng-if="isAuthenticated != 'view' " class="col m4 black-text" ui-sref="view">
+                    <i class="fa fa-tablet fa-3x" aria-hidden="true"></i>
+                </a>
+                <button class="col m7 btn waves-effect waves-light white black-text"
+                            ng-click="logout()">Logout
+<!--                     <i class="material-icons right logout_icon">send</i>
+ -->            </button>
+            </div>
+
+            <ul class="right side-nav" id="nav-mobile" style="transform: translateX(-100%);">
+              <li class="hide-on-small-only"><a href="parallax.html"><i class="mdi-navigation-arrow-back"></i></a></li>
+            </ul>
+            <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+<div class="parallax-container">
+    <div class="parallax"><img src="app/images/4.jpg"></div>
+</div>
+<div class="section white">
+    <div class="row container" style="font-weight: 400;color: rgba(0, 0, 0, 0.87);font-family: 'Roboto' !important; line-height: 1.7em">
+        <h2 class="header">ikya</h2>
+        <p style="color: #424242 !important" class="text-darken-4">ikya is responsible for power distribution in 8 districts of Karnataka. ikya covers an area of 41,092 Sq. Kms. with a population of over 207 lacs. In the year 1999, Karnataka embarked on a major reform of the power sector.
+        <br>
+        <br>
+        ikya - Bangalore Electricity Supply Company Limited is responsible for power distribution in Eight districts of Karnataka. ikya covers an area of 41,092 Sq. Kms. with a population of over 207 lakhs.
+        The company has 3 operating Zones – Bangalore Metropolitan Area Zone, Bangalore Rural Area Zone and Chitradurga Zone, 9 Circles, 28 Divisions, 119 Sub-divisions and 453 Section Offices.
+        <br>
+        In the year 1999, Karnataka embarked on a major Reform of the power sector. As a first step, Karnataka Electricity Board (KEB) was dissolved and in its place, the Karnataka Power Transmission Corporation Limited (KPTCL) was incorporated.
+        <br>
+        This was followed by the constitution of Karnataka Electricity Regulatory Commission (KERC) in November 1999.In the next phase of the Reform Process, the transmission and distribution business managed by KPTCL were unbundled in June 2002. Four new distribution companies were formed to distribute power in Karnataka.
+        <br>
+        Bangalore Electricity Supply Company Limited (ikya) has taken over the responsibility from KPTCL for the distribution of electricity in 8 districts and commenced its operations from 1st June 2002.
+        <br>
+        
+        </p>
+    </div>
+</div>
+<div class="parallax-container">
+    <div class="parallax"><img src="app/images/9.jpg"></div>
+</div>
+</div>
+
+ <!-- <footer class="page-footer">
+      <div>
+        <div class="row">
+        
+          <div ng-if="!showLinks"  class="col offset-m1 m5">
+            <h5 class="white-text">NanoBi Custom Dashboard</h5>
+            <p class="grey-text text-lighten-4">Analytics Delivered Simple, Agile, Pervasive......</p>
+          </div>
+
+          <div ng-if="showLinks" class="col offset-m1 m5">
+            <h5 class="white-text">Links</h5>
+            <ul style="display:inline-block;margin-right: 5%">
+              <li><a class="grey-text text-lighten-3" href="http://www.nanobi.in" target="_blank">Nanobi Home</a></li>
+              <li><a class="grey-text text-lighten-3" href="http://www.nanobi.in/partners.html/" target="_blank">The Sparrow Club</a></li>
+              <li><a class="grey-text text-lighten-3" href="http://www.theanalyticstree.com" target="_blank">The Analytics Tree</a></li>
+			</ul>
+			<ul style="display:inline-block;margin-right: 5%">
+              <li><a class="grey-text text-lighten-3" href="http://nanobiblog.nanobianalytics.com" target="_blank">Blog</a></li>
+              <li><a class="grey-text text-lighten-3" href="http://www.nanobi.in/privacy.html/" target="_blank">Privacy Policy</a></li>
+              <li><a class="grey-text text-lighten-3" href="http://www.nanobi.in/copyright.html/" target="_blank">Copyright Information</a></li>
+             </ul>
+
+			<ul style="display:inline-block;margin-right: 5%">
+              <li><a class="grey-text text-lighten-3" href="http://www.nanobi.in/media.html/" target="_blank">Media</a></li>
+              <li><a class="grey-text text-lighten-3" href="http://www.nanobi.in/careers.html/" target="_blank">Careers</a></li>
+              <li><a class="grey-text text-lighten-3" href="http://www.nanobi.in/contact.html/" target="_blank">Contact us</a></li>
+            </ul>
+          </div>
+
+          <div class="col offset-m2 m4">
+            <span class="white-text">
+            <h5 class="white-text">Contacts</h5>
+                <p>
+                    <i class="fa fa-phone"></i> Telephone : + 91 080-677 39926 
+                </p>
+                <p>
+                    <i class="fa fa-envelope-o"></i> email : info@nanobianalytics.com
+                </p>
+            </span>
+ 	      </div>
+
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        Copyright © 2012-2015 nanobi data and analytics pvt ltd | all rights reserved
+        <a ng-if="!showLinks" class="grey-text text-lighten-4 right" ng-click="toggleLinks()" href="">More Links</a>
+        <a ng-if="showLinks" class="grey-text text-lighten-4 right" ng-click="toggleLinks()" href="">Back</a>
+        </div>
+      </div>
+    </footer>
+<script>
+    $(document).ready(function () {
+        $('.parallax').parallax();
+    });
+</script> -->

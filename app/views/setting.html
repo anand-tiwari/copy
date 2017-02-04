@@ -1,0 +1,31 @@
+<div style="margin-top:70px;"> Welcome to Settings Page </div>
+
+
+<div class="row">
+	<!-- <form name="userForm" ng-submit="ApplySettings(userForm.$valid)"> -->
+	<!-- novalidate prevents HTML5 	validation since we will be validating ourselves -->
+        <!-- NAME -->
+        <div class="col m8 form-group">
+        	<form class="row" ng-submit="addDashboardId(name)">
+        		<label class="col m2">DashboardId</label>
+	            <input class="col m7"type="text" name="name" class="form-control" ng-model="name" required placeholder="add dashboard id">
+	            <button type="submit" class="btn btn-primary col m2  white black-text">
+	            	add-Form
+	            </button>
+        	</form>
+        </div>
+        <div class="col m4">
+        	<div>DashBoard Selected List</div>
+        	<ul ng-repeat="item in dashboardList">
+        		<li class="listStyle">
+        			{{item.id}}
+        			 <a ng-click="removeDashboard($index)">
+          				<span class="glyphicon glyphicon-trash"></span>
+        			</a>
+        		</li>
+        	</ul>
+        </div>
+        <!-- SUBMIT BUTTON -->
+       <!-- <button type="submit" class="btn btn-primary">Submit</button>      -->
+    <!-- </form> -->
+</div>
